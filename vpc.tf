@@ -11,7 +11,7 @@ resource "aws_vpc" "demo" {
 
   tags = map(
     "Name", "terraform-eks-demo-node",
-    "kubernetes.io/cluster/${var.cluster-name}", "shared",
+    "kubernetes.io/cluster/${params.cluster}", "shared",
   )
 }
 
